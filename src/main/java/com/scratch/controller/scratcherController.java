@@ -1,14 +1,11 @@
-package controller;
+package com.scratch.controller;
 
 import com.scratch.Scratch_Bling.ScratchBlingApplication;
-import model.scratchers;
+import com.scratch.repository.ScratcherRepo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
-import repository.ScratcherRepo;
 
 @RestController
 public class scratcherController {
@@ -16,7 +13,7 @@ public class scratcherController {
     private static final Logger logger = LoggerFactory.getLogger(ScratchBlingApplication.class);
 
     @Autowired
-    private ScratcherRepo scratcherRepo;
+    public ScratcherRepo scratcherRepo;
 
     @GetMapping("/")
     public String hello() {
@@ -24,7 +21,7 @@ public class scratcherController {
         return "Hello";
     }
 
-    @GetMapping("/scratchers")
+    /*@GetMapping("/scratchers")
     public Page<scratchers> getScratchers(Pageable pageable) {
         return scratcherRepo.findAll(pageable);
     }
@@ -58,5 +55,5 @@ public class scratcherController {
         } else {
             return "Request body empty. please try again with request body";
         }
-    }
+    }*/
 }

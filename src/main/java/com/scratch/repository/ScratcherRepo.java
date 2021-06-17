@@ -1,6 +1,6 @@
-package repository;
+package com.scratch.repository;
 
-import model.scratchers;
+import com.scratch.model.scratchers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,5 +12,5 @@ public interface ScratcherRepo extends JpaRepository<scratchers, String> {
     scratchers findByName(String name);
     scratchers insert(scratchers scratcher);
     scratchers update(scratchers scratcher);
-    void delete(scratchers scratcher);
+    //void delete(scratchers scratcher);
 }

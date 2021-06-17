@@ -1,4 +1,4 @@
-package exception;
+package com.scratch.exception;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.web.bind.annotation.GetMapping;

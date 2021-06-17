@@ -1,4 +1,4 @@
-package model;
+package com.scratch.model;
 
 import org.w3c.dom.Text;
 
